@@ -1,0 +1,17 @@
+{
+  "name": "date-adder",
+  "version": "0.0.1",
+  "description": "An adding machine of objects of the Date.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "date",
+    "adder",
+    "adding",
+    "machine"
+  ],
+  "author": "ledsun <shigeru.nakajima@gmail.com>",
+  "license": "MIT"
+}
