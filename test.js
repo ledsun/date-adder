@@ -3,52 +3,93 @@ var assert = require('power-assert'),
   assertDate = function(acutal, expected, message) {
     assert.equal(acutal.getTime(), expected.getTime(), message)
   },
-  orign = new Date(2014, 10, 28)
+  origin = new Date(2014, 10, 28)
 
 
 describe('date adder', function() {
-  describe('param hours', function() {
+  describe('various pamams', function() {
+    it('add 1 year', function() {
+      assert.equal(+date_adder(origin, {
+        'years': 1
+      }), +new Date(2015, 10, 28))
+    })
+
+    it('add 1 months', function() {
+      assert.equal(+date_adder(origin, {
+        'months': 1
+      }), +new Date(2014, 11, 28))
+    })
+
+    it('add 1 day', function() {
+      assert.equal(+date_adder(origin, {
+        'days': 1
+      }), +new Date(2014, 10, 29))
+    })
+
     it('add 1 hour', function() {
-      assert.equal(+date_adder(orign, {
+      assert.equal(+date_adder(origin, {
+        'hours': 1
+      }), +new Date(2014, 10, 28, 1))
+    })
+
+    it('add 1 minute', function() {
+      assert.equal(+date_adder(origin, {
+        'minutes': 1
+      }), +new Date(2014, 10, 28, 0, 1))
+    })
+
+    it('add 1 second', function() {
+      assert.equal(+date_adder(origin, {
+        'seconds': 1
+      }), +new Date(2014, 10, 28, 0, 0, 1))
+    })
+
+    it('add 1 millisecond', function() {
+      assert.equal(+date_adder(origin, {
+        'milliseconds': 1
+      }), +new Date(2014, 10, 28, 0, 0, 0, 1))
+    })
+  })
+
+  describe('various values, for example hours', function() {
+    it('add 1 hour', function() {
+      assert.equal(+date_adder(origin, {
         'hours': 1
       }), +new Date(2014, 10, 28, 1))
     })
 
     it('add 24 hours', function() {
-      assert.equal(+date_adder(orign, {
+      assert.equal(+date_adder(origin, {
         'hours': 24
       }), +new Date(2014, 10, 29))
     })
 
     it('add -1 hours', function() {
-      assert.equal(+date_adder(orign, {
+      assert.equal(+date_adder(origin, {
         'hours': -1
       }), +new Date(2014, 10, 27, 23))
     })
   })
 
-  describe('pamam date', function() {
-    it('add 1 day', function() {
-      assert.equal(+date_adder(orign, {
-        'date': 1
-      }), +new Date(2014, 10, 29))
+  describe('multi pamams are added all', function() {
+    it('add 1 per all params', function() {
+      assert.equal(+date_adder(origin, {
+        'years': 1,
+        'months': 1,
+        'days': 1,
+        'hours': 1,
+        'minutes': 1,
+        'seconds': 1,
+        'milliseconds': 1
+      }), +new Date(2015, 11, 29, 1, 1, 1, 1))
     })
   })
 
-  describe('multi pamams', function() {
-    it('add 1 day and 1 hour', function() {
-      assert.equal(+date_adder(orign, {
-        'date': 1,
-        'hours': 1
-      }), +new Date(2014, 10, 29, 1))
-    })
-  })
-
-  describe('unsupported pamams', function() {
+  describe('unsupported pamams is ignored', function() {
     it('add 1 foo', function() {
-      assert.equal(+date_adder(orign, {
+      assert.equal(+date_adder(origin, {
         'foo': 1
-    }), +orign)
+    }), +origin)
     })
   })
 })

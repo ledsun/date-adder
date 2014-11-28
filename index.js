@@ -1,30 +1,41 @@
 (function() {
   'use strict'
 
-  var supported = ['date', 'hours'],
+  var paramMap = {
+      years: 'FullYear',
+      months: 'Month',
+      days: 'Date',
+      hours: null,
+      minutes: null,
+      seconds: null,
+      milliseconds: null
+    },
+    supported = Object.keys(paramMap),
+    rejectUnsupported = function(name) {
+      return supported.indexOf(name) !== -1
+    },
     toPascal = function(name) {
       return name[0].toUpperCase() + name.substr(1)
     },
-    toNames = function(name) {
-      var pascal = toPascal(name)
+    toMaterials = function(name, params) {
+      var standardAPI = paramMap[name] || toPascal(name)
       return {
-        name: name,
-        getter: 'get' + pascal,
-        setter: 'set' + pascal
+        getter: 'get' + standardAPI,
+        setter: 'set' + standardAPI,
+        diff: params[name]
       }
     },
+    add = function(date, d) {
+      date[d.setter](date[d.getter]() + d.diff)
+      return date
+    },
     date_adder = function(src, params) {
-      var result = new Date(+src)
-
-      Object.keys(params)
-        .filter(function(name) {
-          return supported.indexOf(name) !== -1
+      return Object.keys(params)
+        .filter(rejectUnsupported)
+        .map(function(name) {
+          return toMaterials(name, params)
         })
-        .map(toNames)
-        .forEach(function(names) {
-          result[names.setter](result[names.getter]() + params[names.name])
-        })
-      return result
+        .reduce(add, new Date(+src))
     }
 
   if (typeof module === 'object') {
