@@ -49,13 +49,13 @@ console.log(
 ```
 
 ## Parameters
-- years
-- months
-- days
-- hours
-- minutes
-- seconds
-- milliseconds
+- [ ]years
+- [ ]months
+- [ ]date
+- [ ]hours
+- [ ]minutes
+- [ ]seconds
+- [ ]milliseconds
 
 ## Contributing
 
