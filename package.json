@@ -4,7 +4,7 @@
   "description": "An adding machine of objects of the Date.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/test-date-adder.js"
+    "test": "mocha enable-power-assert.js test.js"
   },
   "keywords": [
     "date",
@@ -13,5 +13,9 @@
     "machine"
   ],
   "author": "ledsun <shigeru.nakajima@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "espower-loader": "^0.10.0",
+    "power-assert": "^0.10.0"
+  }
 }

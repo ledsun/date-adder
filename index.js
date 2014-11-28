@@ -1,5 +1,7 @@
 (function() {
-    var date_adder= function(){}
+    var date_adder= function(){
+        return new Date(2014, 10, 29)
+    }
 
   if (typeof module === 'object') {
     // CommonJS
