@@ -11,7 +11,7 @@
       milliseconds: null
     },
     supported = Object.keys(paramMap),
-    rejectUnsupported = function(name) {
+    acceptSupported = function(name) {
       return supported.indexOf(name) !== -1
     },
     toPascal = function(name) {
@@ -31,7 +31,7 @@
     },
     date_adder = function(src, params) {
       return Object.keys(params)
-        .filter(rejectUnsupported)
+        .filter(acceptSupported)
         .map(function(name) {
           return toMaterials(name, params)
         })
