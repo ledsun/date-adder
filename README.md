@@ -57,6 +57,10 @@ console.log(
 - [x] seconds
 - [x] milliseconds
 
+## Todo
+- [x] CI in the travis.ci
+- [ ] browser support
+
 ## Contributing
 
 contributeするには
