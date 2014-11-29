@@ -74,10 +74,3 @@ Node.jsで実行
 npm install
 npm test
 ```
-
-ブラウザで実行
-```
-npm install
-bower install
-open test/index.html
-```
