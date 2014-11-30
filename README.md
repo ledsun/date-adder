@@ -33,19 +33,26 @@ dateAdder(new Date(2014,10,27), {hours: 1})
 ```
 
 ### For browser
-インストール
+ダウンロード
 ```
-bower install git://github.com/ledsun/date-adder.git
+curl https://raw.githubusercontent.com/ledsun/date-adder/master/index.js -o date-adder.js
 ```
 
 htmlにscriptタグを埋め込みます。
 ```html
-<script src="bower_components/date-adder/index.js"></script>
+<html>
+
+<body>
+<span id="result"></span>
+<script src="date-adder.js"></script>
 <script>
-console.log(
-    dateAdder(new Date(2014,10,27), {hours: 1})
-)
+document.getElementById('result').innerHTML = dateAdder(new Date(2014, 10, 27), {
+    hours: 1
+})
 </script>
+</body>
+
+</html>
 ```
 
 ## Parameters
@@ -59,7 +66,10 @@ console.log(
 
 ## Todo
 - [x] CI in the travis.ci
-- [ ] browser support
+- [x] browser support
+- [ ] check cross browser compatibility
+- [ ] npm publish
+- [ ] bower register
 
 ## Contributing
 
