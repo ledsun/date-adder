@@ -29,7 +29,7 @@
       date[d.setter](date[d.getter]() + d.diff)
       return date
     },
-    date_adder = function(src, params) {
+    dateAdder = function(src, params) {
       return Object.keys(params)
         .filter(acceptSupported)
         .map(function(name) {
@@ -40,9 +40,9 @@
 
   if (typeof module === 'object') {
     // CommonJS
-    module.exports = date_adder;
+    module.exports = dateAdder;
   } else {
     // Browser global.
-    window.generateUrl = date_adder;
+    window.dateAdder = dateAdder;
   }
 })()

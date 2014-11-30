@@ -14,7 +14,7 @@ This function will return a new instance, not mutate the parameters.
 
 実行例
 ```js
-date_adder(new Date(2014,10,27), {hours: 1}) //Thu Nov 28 2014 00:00:00 GMT+0900 (JST)
+dateAdder(new Date(2014,10,27), {hours: 1}) //Thu Nov 28 2014 00:00:00 GMT+0900 (JST)
 ```
 
 ## Setup
@@ -27,9 +27,9 @@ npm install git://github.com/ledsun/date-adder.git
 
 実行例
 ```js
-var date_adder = require('date-adder')
+var dateAdder = require('date-adder')
 
-date_adder(new Date(2014,10,27), {hours: 1})
+dateAdder(new Date(2014,10,27), {hours: 1})
 ```
 
 ### For browser
@@ -43,7 +43,7 @@ htmlにscriptタグを埋め込みます。
 <script src="bower_components/date-adder/index.js"></script>
 <script>
 console.log(
-    date_adder(new Date(2014,10,27), {hours: 1})
+    dateAdder(new Date(2014,10,27), {hours: 1})
 )
 </script>
 ```
