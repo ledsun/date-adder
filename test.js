@@ -1,8 +1,5 @@
 var assert = require('power-assert'),
   date_adder = require('./index'),
-  assertDate = function(acutal, expected, message) {
-    assert.equal(acutal.getTime(), expected.getTime(), message)
-  },
   origin = new Date(2014, 10, 28)
 
 
