@@ -4,7 +4,7 @@
   "description": "An adding machine of objects of the Date.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha enable-power-assert.js test.js"
+    "test": "mocha"
   },
   "keywords": [
     "date",

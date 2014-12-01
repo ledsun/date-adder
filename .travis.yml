@@ -1,8 +1,12 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.11"
+- 0.10
 before_install:
-  - "npm install -g mocha"
+- npm install -g mocha zuul
 script:
-  - "npm test"
+- npm test
+- zuul -- test
+env:
+  global:
+  - secure: NUfz+UOIp7kcHXwDjnrSZzgTB59bLGSiGlVl1SvN41RTHBVa+QPsja6VGTqw9h+HdB681/5CNn3Nkn7SMXK8OvTey0slWOY6WqNAuyuSHfnDtuWnkjvpqbH1y7AqNP9UGqf7aoYNcPfWWYlNc4MJcThczqjHVCYkeZTUHajxvS8=
+  - secure: Dim38ZLG3/bg4Dl2yRNeL7xe+6ozOcd8BqOXSJdwdQ6NGC/YkwnBemGtlNZV5eO/Oc+nBUuMRxU907aFkzqDc4NrcA0dzSDmseNFxMnzObX5ft3QVN0RC9EwYwLmSAFpKZao0kBDU4xARoUf1Ddzn1hQVjQ7s0vFzUPSqZRXZZQ=

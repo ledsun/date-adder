@@ -10,6 +10,8 @@ This function will return a new instance, not mutate the parameters.
 
 [![Build Status](https://travis-ci.org/ledsun/date-adder.svg)](https://travis-ci.org/ledsun/date-adder)
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/date-adder.svg)](https://saucelabs.com/u/date-adder)
+
 ## Usage
 
 実行例
@@ -67,7 +69,7 @@ document.getElementById('result').innerHTML = dateAdder(new Date(2014, 10, 27), 
 ## Todo
 - [x] CI in the travis.ci
 - [x] browser support
-- [ ] check cross browser compatibility
+- [x] check cross browser compatibility
 - [ ] npm publish
 - [ ] bower register
 
@@ -83,8 +85,24 @@ contributeするには
 1. Enjoy a refreshing coffe and wait
 
 ### Testing
-Node.jsで実行
+#### Node.js
+
+mocha is used to test.
+
+mochaを使います。
+
 ```
+npm install -g mocha
 npm install
 npm test
+```
+
+#### browser
+
+[zuul](https://github.com/defunctzombie/zuul) is used to test.
+
+zuulを使います。
+```
+npm install -g zuul
+zuul --local 8080 -- test
 ```
