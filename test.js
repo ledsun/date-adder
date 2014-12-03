@@ -86,7 +86,7 @@ describe('date adder', function() {
     it('add 1 foo', function() {
       assert.equal(+dateAdder(origin, {
         'foo': 1
-    }), +origin)
+      }), +origin)
     })
   })
 })

@@ -2,8 +2,9 @@ language: node_js
 node_js:
 - 0.10
 before_install:
-- npm install -g mocha zuul
+- npm install -g mocha zuul gulp
 script:
+- npm run build
 - npm test
 - zuul -- test
 env:
