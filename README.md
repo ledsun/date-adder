@@ -6,7 +6,7 @@ Dateオブジェクトの加算機です。
 
 This function will return a new instance, not mutate the parameters.
 
-新しいインスタンスを返します、パラメータを変化させません。
+新しいインスタンスを返します、引数を変化させません。
 
 [![Build Status](https://travis-ci.org/ledsun/date-adder.svg)](https://travis-ci.org/ledsun/date-adder)
 
@@ -16,8 +16,21 @@ This function will return a new instance, not mutate the parameters.
 
 実行例
 ```js
+dateAdder(new Date(2014,10,27), {days: 1}) //Thu Nov 29 2014 00:00:00 GMT+0800 (JST)
+
 dateAdder(new Date(2014,10,27), {hours: 1}) //Thu Nov 28 2014 00:00:00 GMT+0900 (JST)
+
+dateAdder(new Date(2014,10,27), {days: 1, hours: 1}) //Thu Nov 29 2014 00:00:00 GMT+0900 (JST)
 ```
+
+### Parameters
+- years
+- months
+- days
+- hours
+- minutes
+- seconds
+- milliseconds
 
 ## Setup
 
@@ -42,9 +55,6 @@ curl https://raw.githubusercontent.com/ledsun/date-adder/master/index.js -o date
 
 htmlにscriptタグを埋め込みます。
 ```html
-<html>
-
-<body>
 <span id="result"></span>
 <script src="date-adder.js"></script>
 <script>
@@ -52,24 +62,13 @@ document.getElementById('result').innerHTML = dateAdder(new Date(2014, 10, 27), 
     hours: 1
 })
 </script>
-</body>
-
-</html>
 ```
-
-## Parameters
-- [x] years
-- [x] months
-- [x] days
-- [x] hours
-- [x] minutes
-- [x] seconds
-- [x] milliseconds
 
 ## Todo
 - [x] CI in the travis.ci
 - [x] browser support
 - [x] check cross browser compatibility
+- [ ] Universal Module Definition
 - [ ] npm publish
 - [ ] bower register
 
