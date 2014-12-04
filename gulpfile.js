@@ -1,18 +1,19 @@
 var gulp = require('gulp'),
   umd = require('gulp-umd'),
+  path = require('path'),
+  toFilename = function(file) {
+    return path.basename(file.path, path.extname(file.path))
+  },
+  umdOption = {
+    exports: toFilename,
+    namespace: toFilename
+  },
   rename = require("gulp-rename")
 
 gulp
   .task('umd', function() {
     return gulp.src('src/dateAdder.js')
-      .pipe(umd({
-        exports: function(file) {
-          return 'dateAdder'
-        },
-        namespace: function(file) {
-          return 'dateAdder'
-        }
-      }))
+      .pipe(umd(umdOption))
       .pipe(rename('index.js'))
       .pipe(gulp.dest('.'))
   })
