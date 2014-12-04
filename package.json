@@ -1,11 +1,15 @@
 {
   "name": "date-adder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An adding machine of objects of the Date.",
   "main": "index.js",
   "scripts": {
     "build": "gulp",
     "test": "mocha --require enable-power-assert.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ledsun/date-adder.git"
   },
   "keywords": [
     "date",
@@ -13,15 +17,18 @@
     "adding",
     "machine"
   ],
-  "author": "ledsun <shigeru.nakajima@gmail.com>",
+  "author": "ledsun",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ledsun/date-adder/issues"
+  },
+  "homepage": "https://github.com/ledsun/date-adder",
   "devDependencies": {
     "espower-loader": "^0.10.0",
-    "power-assert": "^0.10.0"
-  },
-  "dependencies": {
     "gulp": "^3.8.10",
     "gulp-rename": "^1.2.0",
-    "gulp-umd": "^0.1.3"
-  }
+    "gulp-umd": "^0.1.3",
+    "power-assert": "^0.10.0"
+  },
+  "dependencies": {}
 }
