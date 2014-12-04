@@ -1,6 +1,6 @@
 {
   "name": "date-adder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An adding machine of objects of the Date.",
   "main": "index.js",
   "scripts": {

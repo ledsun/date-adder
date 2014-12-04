@@ -16,11 +16,11 @@ This function will return a new instance, not mutate the parameters.
 
 実行例
 ```js
-dateAdder(new Date(2014,10,27), {days: 1}) //Thu Nov 29 2014 00:00:00 GMT+0800 (JST)
+dateAdder(new Date(2014,10,27), {days: 1}) //Thu Nov 28 2014 00:00:00 GMT+0900 (JST)
 
-dateAdder(new Date(2014,10,27), {hours: 1}) //Thu Nov 28 2014 00:00:00 GMT+0900 (JST)
+dateAdder(new Date(2014,10,27), {hours: 1}) //Thu Nov 27 2014 01:00:00 GMT+0900 (JST)
 
-dateAdder(new Date(2014,10,27), {days: 1, hours: 1}) //Thu Nov 29 2014 00:00:00 GMT+0900 (JST)
+dateAdder(new Date(2014,10,27), {days: 1, hours: 1}) //Thu Nov 28 2014 01:00:00 GMT+0900 (JST)
 ```
 
 ### Parameters
@@ -37,7 +37,7 @@ dateAdder(new Date(2014,10,27), {days: 1, hours: 1}) //Thu Nov 29 2014 00:00:00 
 ### For Node.js
 インストール
 ```
-npm install git://github.com/ledsun/date-adder.git
+npm install date-adder
 ```
 
 実行例
@@ -69,7 +69,7 @@ document.getElementById('result').innerHTML = dateAdder(new Date(2014, 10, 27), 
 - [x] browser support
 - [x] check cross browser compatibility
 - [x] Universal Module Definition
-- [ ] npm publish
+- [x] npm publish
 - [ ] bower register
 
 ## Contributing
@@ -131,4 +131,17 @@ open example.js
 ```
 npm install -g zuul
 zuul --local 8080 -- test
+```
+
+### Deploy
+
+Update `package.json`.
+
+`package.json`を更新します。
+
+```
+npm install
+npm run build
+npm test
+npm publish
 ```
