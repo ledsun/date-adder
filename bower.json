@@ -1,0 +1,28 @@
+{
+  "name": "date-adder",
+  "main": "index.js",
+  "version": "0.0.3",
+  "homepage": "https://github.com/ledsun/date-adder",
+  "authors": [
+    "ledsun"
+  ],
+  "description": "An adding machine of objects of the Date.",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "date",
+    "adder",
+    "adding",
+    "machine"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test.js"
+  ]
+}
