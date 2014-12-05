@@ -97,7 +97,7 @@ The main function in `src/dateAdder.js`.
 
 `src/dateAdder.js` is converted to `index.js` as [UMD](https://github.com/umdjs/umd) by [gulp](http://gulpjs.com/).
 
-`src/dateAdder.js`を[gulp](http://gulpjs.com/)使って[UMD](https://github.com/umdjs/umd)に変換します。変換した先は`index.html`です。
+`src/dateAdder.js`を[gulp](http://gulpjs.com/)使って[UMD](https://github.com/umdjs/umd)に変換します。変換した先は`index.js`です。
 
 ### Testing
 #### Node.js
