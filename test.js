@@ -4,6 +4,12 @@ var assert = require('power-assert'),
 
 
 describe('date adder', function() {
+  it('return new object', function() {
+    assert.notEqual(dateAdder(origin, {
+      'hours': 1
+    }), origin)
+  })
+
   describe('various pamams', function() {
     it('add 1 year', function() {
       assert.equal(+dateAdder(origin, {
