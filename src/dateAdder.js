@@ -29,6 +29,9 @@ var paramMap = {
   }
 
 function dateAdder(src, params) {
+  src = src || new Date
+  params = params || {}
+
   return Object.keys(params)
     .filter(acceptSupported)
     .map(function(name) {

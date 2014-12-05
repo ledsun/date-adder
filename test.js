@@ -89,4 +89,16 @@ describe('date adder', function() {
       }), +origin)
     })
   })
+
+  describe('missing arguments', function() {
+    it('return new object unless params', function() {
+      var newOne = dateAdder(origin)
+      assert.notEqual(newOne, origin)
+      assert.equal(+newOne, +origin)
+    })
+
+    it('return now unless src', function() {
+      assert.equal(+dateAdder(), +(new Date))
+    })
+  })
 })

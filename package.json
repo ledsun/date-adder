@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
-    "test": "mocha"
+    "test": "mocha --require enable-power-assert.js"
   },
   "keywords": [
     "date",
