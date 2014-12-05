@@ -48,29 +48,22 @@ dateAdder(new Date(2014,10,27), {hours: 1})
 ```
 
 ### For browser
-ダウンロード
+インストール
+
 ```
-curl https://raw.githubusercontent.com/ledsun/date-adder/master/index.js -o date-adder.js
+bower install date-adder
 ```
 
 htmlにscriptタグを埋め込みます。
 ```html
 <span id="result"></span>
-<script src="date-adder.js"></script>
+<script src="bower_components/date-adder/index.js"></script>
 <script>
 document.getElementById('result').innerHTML = dateAdder(new Date(2014, 10, 27), {
     hours: 1
 })
 </script>
 ```
-
-## Todo
-- [x] CI in the travis.ci
-- [x] browser support
-- [x] check cross browser compatibility
-- [x] Universal Module Definition
-- [x] npm publish
-- [ ] bower register
 
 ## Contributing
 
