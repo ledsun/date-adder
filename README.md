@@ -96,7 +96,6 @@ contributeするには
 ### Build
 
 ```
-npm install -g gulp
 npm install
 npm run build
 ```
@@ -117,7 +116,6 @@ The main function in `src/dateAdder.js`.
 [mocha](https://github.com/mochajs/mocha)を使います。
 
 ```
-npm install -g mocha
 npm install
 npm run build
 npm test
@@ -139,8 +137,7 @@ open example.js
 クロスブラウザで動作するか確認するには、[zuul](https://github.com/defunctzombie/zuul)を使います。
 
 ```
-npm install -g zuul
-zuul --local 8080 -- test
+npm run browser
 ```
 
 ### Deploy
