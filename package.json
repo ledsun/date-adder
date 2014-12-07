@@ -23,7 +23,10 @@
     "adding",
     "machine"
   ],
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "http://ledsun.mit-license.org/"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
