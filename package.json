@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp",
     "test": "mocha --require enable-power-assert.js",
-    "browser": "zuul --local 8080 -- test"
+    "browser": "zuul --local 8080 -- test",
+    "saucelabs": "zuul -- test"
   },
   "repository": {
     "type": "git",
