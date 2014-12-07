@@ -1,7 +1,7 @@
 {
   "name": "date-adder",
   "description": "An adding machine of objects of the Date.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "ledsun",
   "bugs": {
     "url": "https://github.com/ledsun/date-adder/issues"
@@ -16,6 +16,14 @@
     "power-assert": "^0.10.0",
     "zuul": "^1.15.2"
   },
+  "files": [
+    "README.md",
+    "index.js",
+    "package.json",
+    "src",
+    "test.js",
+    "example.js"
+  ],
   "homepage": "https://github.com/ledsun/date-adder",
   "keywords": [
     "date",
