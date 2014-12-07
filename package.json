@@ -1,30 +1,12 @@
 {
   "name": "date-adder",
-  "version": "0.0.4",
   "description": "An adding machine of objects of the Date.",
-  "main": "index.js",
-  "scripts": {
-    "build": "gulp",
-    "test": "mocha --require enable-power-assert.js",
-    "browser": "zuul --local 8080 -- test",
-    "saucelabs": "zuul -- test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ledsun/date-adder.git"
-  },
-  "keywords": [
-    "date",
-    "adder",
-    "adding",
-    "machine"
-  ],
+  "version": "0.0.4",
   "author": "ledsun",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ledsun/date-adder/issues"
   },
-  "homepage": "https://github.com/ledsun/date-adder",
+  "dependencies": {},
   "devDependencies": {
     "espower-loader": "^0.10.0",
     "gulp": "^3.8.10",
@@ -34,5 +16,23 @@
     "power-assert": "^0.10.0",
     "zuul": "^1.15.2"
   },
-  "dependencies": {}
+  "homepage": "https://github.com/ledsun/date-adder",
+  "keywords": [
+    "date",
+    "adder",
+    "adding",
+    "machine"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ledsun/date-adder.git"
+  },
+  "scripts": {
+    "browser": "zuul --local 8080 -- test",
+    "build": "gulp",
+    "saucelabs": "zuul -- test",
+    "test": "mocha --require enable-power-assert.js"
+  }
 }
